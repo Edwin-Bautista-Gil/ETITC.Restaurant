@@ -1,7 +1,3 @@
-// hola//
-
-//hola chicos//
-
-//Holaaaaa//
-
-//bien//
+Analisis
+objetivo
+codigo 
