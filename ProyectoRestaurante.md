@@ -28,5 +28,5 @@ La carencia de un sistema de inventarios eficiente impacta la capacidad de la co
 
 Imolementar un sistema integral de gestión que optimice ña distribución de almuerzos de los estudiantes de la ETITC mediante el control automatizado de la asistencia y un manejo eficiente de los inventarios de alimentos en la cooperativa escolar, con el fin de reducir el desperdicio de recursos, garantizar la entrega equitativa de los almuerzos y mejorar la eficiencia administrativa de servicio alimentario.
 
-*Objetivo especificos:*
- Desarrollar un sistema de registro de almuerzos diarios.
+*Objetivo especificos:* =
+Desarrollar un sistema de registro de almuerzos diarios.
