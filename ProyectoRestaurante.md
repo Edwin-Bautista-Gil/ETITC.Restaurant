@@ -58,3 +58,9 @@ Imolementar un sistema integral de gestión que optimice ña distribución de al
 
 **-Generar estadisticas para mostrar el consumo de almuerzos**
 
+# Referencias:
+- https://www.comedoresblanco.es/estrategia-reducir-desperdicio-alimentos-escolares/
+- https://www.scielo.cl/scielo.php?pid=S0717-75182011000400009&script=sci_arttext&tlng=pt
+- https://repository.udistrital.edu.co/server/api/core/bitstreams/b4273d59-394b-4727-8d20-0f4ed4f7160a/content
+- Chat Gpt
+- Gemini
