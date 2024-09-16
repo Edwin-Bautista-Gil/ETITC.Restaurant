@@ -46,21 +46,22 @@ Imolementar un sistema integral de gestión que optimice ña distribución de al
 
 **-Desarrollar un sistema de registro de almuerzos diarios.**
 
-**-Controlar el acceso de cada estudiante al almuerzo diario**
+**-Controlar el acceso de cada estudiante al almuerzo diario.**
 
-**-Automatizar el monitoreo de asistencia**
+**-Automatizar el monitoreo de asistencia.**
 
-**-Generar reportes sobre el consumo de almuerzo**
+**-Generar reportes sobre el consumo de almuerzo.**
 
-**-Asegurar la trazabilidad y transparencia del servicio**
+**-Asegurar la trazabilidad y transparencia del servicio.**
 
-**-Ofrecer acceso a los estudiantes a su historia de almuerzos**
+**-Ofrecer acceso a los estudiantes a su historia de almuerzos.**
 
-**-Generar estadisticas para mostrar el consumo de almuerzos**
+**-Generar estadisticas para mostrar el consumo de almuerzos.**
+
 
 # Referencias:
 - https://www.comedoresblanco.es/estrategia-reducir-desperdicio-alimentos-escolares/
 - https://www.scielo.cl/scielo.php?pid=S0717-75182011000400009&script=sci_arttext&tlng=pt
 - https://repository.udistrital.edu.co/server/api/core/bitstreams/b4273d59-394b-4727-8d20-0f4ed4f7160a/content
-- Chat Gpt
-- Gemini
+- https://chatgpt.com/
+- https://gemini.google.com/app?hl=es
