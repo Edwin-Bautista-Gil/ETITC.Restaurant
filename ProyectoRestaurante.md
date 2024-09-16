@@ -24,7 +24,7 @@ proyecto:
 **Ineficiencia en la gestión de inventarios**
 La carencia de un sistema de inventarios eficiente impacta la capacidad de la cooperativa para gestionar adecuadamente los recursos alimentarios. Esto genera compras innecesarias o insuficientes de insumos, afectando los costos operativos y la planificación de las compras. Un sistema de inventario automatizado facilitará el seguimiento de los productos disponibles, optimizando las compras y evitando que los alimentos se desperdicien por caducidad o mal uso.
 
-**Objetivo general:**
+##Objetivo general:##
 Imolementar un sistema integral de gestión que optimice ña distribución de almuerzos de los estudiantes de la ETITC mediante el control automatizado de la asistencia y un manejo eficiente de los inventarios de alimentos en la cooperativa escolar, con el fin de reducir el desperdicio de recursos, garantizar la entrega equitativa de los almuerzos y mejorar la eficiencia administrativa de servicio alimentario.
 *Objetivo especificos:*
-# Desarrollar un sistema de registro de almuerzos diarios.
+ Desarrollar un sistema de registro de almuerzos diarios.
