@@ -30,4 +30,16 @@ Imolementar un sistema integral de gestión que optimice ña distribución de al
 
 *Objetivo especificos:* 
 
-Desarrollar un sistema de registro de almuerzos diarios.
+-Desarrollar un sistema de registro de almuerzos diarios.
+
+-Controlar el acceso de cada estudiante al almuerzo diario
+
+-Automatizar el monitoreo de asistencia 
+
+-Generar reportes sobre el consumo de almuerzo
+
+-Asegurar la trazabilidad y transparencia del servicio
+
+-Ofrecer acceso a los estudiantes a su historia de almuerzos
+
+-Generar estadisticas para mostrar el consumo de almuerzos
