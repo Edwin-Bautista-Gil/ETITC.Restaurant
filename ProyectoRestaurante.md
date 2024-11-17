@@ -40,7 +40,7 @@ servicio alimentario.
 
 # Objetivo general:
 
-Imolementar un sistema integral de gestión que optimice ña distribución de almuerzos de los estudiantes de la ETITC mediante el control automatizado de la asistencia y un manejo eficiente de los inventarios de alimentos en la cooperativa escolar, con el fin de reducir el desperdicio de recursos, garantizar la entrega equitativa de los almuerzos y mejorar la eficiencia administrativa de servicio alimentario.
+Implementar un sistema integral de gestión que optimice la distribución de almuerzos de los estudiantes de la ETITC mediante el control automatizado de la asistencia y un manejo eficiente de los inventarios de alimentos en la cooperativa escolar, con el fin de reducir el desperdicio de recursos, garantizar la entrega equitativa de los almuerzos y mejorar la eficiencia administrativa de servicio alimentario.
 
 # Objetivo especificos:
 
@@ -59,7 +59,9 @@ Imolementar un sistema integral de gestión que optimice ña distribución de al
 **-Generar estadisticas para mostrar el consumo de almuerzos.**
 
 # Codigo:
+
 **Clase apiimagen:**
+
 ```java
 package prueba1;
 import java.io.*;
@@ -162,7 +164,9 @@ public class apiimagen {
  la imagen junto con información de alimentos (precio, nombre, descripción, etc.) en una tabla MySQL.
   Usa la clase DataBase para crear la tabla */
 ```
+
 **Clase DataBase:**
+
 ```java
 package prueba1;
 import java.sql.*;
@@ -226,7 +230,9 @@ public class DataBase {
 /*En esta clase DataBase se genera la tabla con el mysql y con la conexion se envia la esturcutra de la tabla
 poniendo nuestros datos de mysql*/
 ```
-**Clase Imagen**
+
+**Clase Imagen:**
+
 ```java
 package prueba1;
 
@@ -251,6 +257,52 @@ public class imagen {
 decodifica el String Base64(base64Image) a un arreglo de bytes y escribe esos bytes en un archivo con 
 el nombre especificado (fileName)*/
 ```
+
+**Dependencias pom:**
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>prueba1</groupId>
+    <artifactId>prueba1</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20210307</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+    </dependencies>
+</project>
+```
+
+
+
+
+
 
 
 
