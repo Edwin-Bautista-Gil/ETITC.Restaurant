@@ -298,13 +298,70 @@ el nombre especificado (fileName)*/
     </dependencies>
 </project>
 ```
+# Explicacion del código:
 
+# -Codigo apiimagen:
+Este código se conecta a la API de Freepik para generar una imagen a partir de una descripción textual y luego almacenar los datos de esa imagen en una base de datos.
 
+**Generación de la imagen:** El código apiimagen es el que genera una imagen usando la API de Freepik, que toma una descripción textual como entrada.
 
+**Extracción de la imagen:** Cuando tenemos la respuesta JSON de la API, la imagen se extrae en formato Base64.
+Almacenamiento en la base de datos: Con la imagen en Base64, el código crea una tabla en la base de datos usando el método CreateTable de la clase DataBase, y luego inserta los datos (como el nombre, tipo, cantidad, etc.) junto con la imagen en la base de datos usando el método insertData.
 
+**Almacenamiento local:** La imagen también puede ser almacenada localmente en el disco usando el método saveImage de la clase Imagen. Este paso no es invocado directamente en el código apiimagen, pero es útil para guardar la imagen en tu computadora.
+Propiedades de la clase:
 
+**URL:** La URL de conexión a la base de datos MySQL (en este caso, está apuntando a una base de datos llamada prueba1 en un servidor local).
 
+*USER y PASSWORD:* Las credenciales de acceso a la base de datos.
+*table_name:* El nombre de la tabla que se va a manejar.
+*Constructor:* Recibe un nombre de tabla y lo asigna a la variable estática table_name.
+*Método getConnection:* Establece y devuelve una conexión a la base de datos usando el DriverManager.getConnection con los parámetros URL, USER, y PASSWORD.
+*Método CreateTable:*Este método crea una tabla en la base de datos con el nombre especificado en el constructor, si la tabla no existe.
 
+*La tabla tiene las siguientes columnas:*
+
+-Valor: un valor entero que es la clave primaria.
+-Nombre, Tipo, Descripcion, Codigonum: columnas de texto que contienen información de los productos o elementos a almacenar.
+-Cantidad: un entero que representa la cantidad del producto.
+-Imagen: un campo LONGBLOB para almacenar imágenes en formato binario.
+
+*Método insertData:* Inserta datos en la tabla creada, como el valor, nombre, tipo, cantidad, descripción, código y la imagen (en formato binario) usando un PreparedStatement.
+
+**Descripción de la conexión HTTP:**
+
+La aplicación realiza una solicitud HTTP POST a la API de Freepik (https://api.freepik.com/v1/ai/text-to-image), usando una clave de API (la dan al registrarnos en Freepik).
+En el cuerpo de la solicitud JSON, se especifica un prompt (una descripción de lo que se quiere en la imagen) y algunos parámetros de estilo (color, iluminación, encuadre, etc.).
+
+*Solicitud y respuesta de la API:*
+
+-La respuesta de la API es un JSON que contiene, entre otras cosas, la imagen generada en formato Base64. 
+-La respuesta es leída y procesada para extraer el string de la imagen en formato Base64.
+
+*Procesamiento de la imagen:* El código extrae la imagen en Base64 desde la respuesta JSON.
+Luego, esa imagen Base64 se convierte a un arreglo de bytes (para almacenarla en la base de datos).
+
+*Almacenamiento en base de datos:* Con los datos extraídos de la API, se crea un objeto DataBase y se utiliza el método CreateTable para asegurarse de que la tabla esté creada.
+Se inserta la imagen y otros datos (como nombre, tipo, cantidad, descripción y código) en la base de datos utilizando el método insertData.
+
+# -Codigo imagen:
+Este código tiene la responsabilidad de guardar una imagen en el disco local a partir de una cadena de texto Base64.
+
+*Método saveImage:*
+
+-Toma una cadena Base64 (que representa una imagen) y el nombre del archivo como parámetros.
+-Decodifica la cadena Base64 en un arreglo de bytes.
+-Luego, guarda esos bytes en un archivo de imagen en el sistema de archivos local, usando un FileOutputStream.
+
+# Resumen general:
+
+*El sistema en su conjunto permite:*
+
+- Generar imágenes automáticamente a partir de descripciones textuales usando la API de Freepik.
+- Almacenar las imágenes y datos asociados en una base de datos MySQL.
+- Guardar las imágenes localmente en el disco.
+
+El flujo principal es la integración entre la API externa (Freepik) y la base de datos local para almacenar y gestionar imágenes generadas y asociarlas a productos o elementos que luego podrían ser consultados y/o modificados.
 
 # Referencias:
 - https://www.comedoresblanco.es/estrategia-reducir-desperdicio-alimentos-escolares/
