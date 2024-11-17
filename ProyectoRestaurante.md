@@ -103,7 +103,6 @@ public class apiimagen {
                 wr.flush();
             }
 
-            // Leer respuesta
             int responseCode = con.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -118,7 +117,6 @@ public class apiimagen {
                 String jsonResponse = response.toString();
                 System.out.println("Respuesta JSON: " + jsonResponse);
 
-                // Extraer imagen en formato Base64
                 String imageBase64 = extractImageBase64(jsonResponse);
 
                 if (imageBase64 != null) {
@@ -228,6 +226,33 @@ public class DataBase {
 /*En esta clase DataBase se genera la tabla con el mysql y con la conexion se envia la esturcutra de la tabla
 poniendo nuestros datos de mysql*/
 ```
+**Clase Imagen**
+```java
+package prueba1;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Base64;
+
+public class imagen {
+    public static void saveImage(String base64Image, String fileName) {
+        byte[] imageBytes = Base64.getDecoder().decode(base64Image);
+
+        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+            fos.write(imageBytes);
+            System.out.println("Imagen guardada como " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/*La clase imagen se usa para guardar imágenes en formato Base64 como archivos físicos en el sistema y 
+decodifica el String Base64(base64Image) a un arreglo de bytes y escribe esos bytes en un archivo con 
+el nombre especificado (fileName)*/
+```
+
+
 
 # Referencias:
 - https://www.comedoresblanco.es/estrategia-reducir-desperdicio-alimentos-escolares/
