@@ -59,9 +59,8 @@ Imolementar un sistema integral de gestión que optimice ña distribución de al
 **-Generar estadisticas para mostrar el consumo de almuerzos.**
 
 # Codigo:
-
-Clase apimagen:
-
+Clase apiimagen:
+```java
 package prueba1;
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -164,8 +163,7 @@ public class apiimagen {
 /*Este código genera una imagen usando la API de Freepik, la convierte de Base64 a binario, y almacena
  la imagen junto con información de alimentos (precio, nombre, descripción, etc.) en una tabla MySQL.
   Usa la clase DataBase para crear la tabla */
-
-
+```
 # Referencias:
 - https://www.comedoresblanco.es/estrategia-reducir-desperdicio-alimentos-escolares/
 - https://www.scielo.cl/scielo.php?pid=S0717-75182011000400009&script=sci_arttext&tlng=pt
